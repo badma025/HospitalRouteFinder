@@ -88,7 +88,7 @@ public class Validation
             else
             {
                 System.out.println();
-                System.out.print("Error: only use the characters allowed: ");
+                System.out.print("Please only use the characters allowed: ");
             }
         }
 

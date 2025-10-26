@@ -502,7 +502,7 @@ public class Menu
         System.out.print("Enter the reason for the appointment: ");
         reason = in.nextLine(); // read the reason text
 
-        appointment = new Appointment(doctorID, patientID, date, reason); // construct appointment object
+        appointment = new Appointment(patientID, doctorID, date, reason); // construct appointment object
 
         boolean result = conn.createAppointment(appointment);
 
@@ -550,7 +550,7 @@ public class Menu
         System.out.print("Enter the new date for the appointment: ");
         newDate = validation.validateDate(this.in); // parse new date
 
-        boolean result = conn.updateAppointment(appointments.get(appointmentNumber), newDate); // update appointment in database
+        boolean result = conn.updateAppointment(appointments.get(appointmentNumber-1), newDate); // update appointment in database, zero-based indexing
 
         if (result)
         {
