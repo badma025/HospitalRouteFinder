@@ -375,8 +375,8 @@ public class DatabaseConnect
             stmt = conn.createStatement();
             String sql = "INSERT INTO Appointment (PatientID, " +
                     "DoctorID, Date, Reason) " +
-                    "VALUES ('" + appointment.PatientID() + "', '" +
-                    appointment.DoctorID() + "', '" +
+                    "VALUES (" + appointment.PatientID() + ", " +
+                    appointment.DoctorID() + ", '" +
                     appointment.Date() + "', '" +
                     appointment.Reason() + "');";
 
